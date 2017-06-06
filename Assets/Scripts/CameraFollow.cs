@@ -5,7 +5,7 @@ public class CameraFollow : MonoBehaviour {
 
 	public Transform myTarget;
 	
-	// Update is called once per frame
+	// Go back to the tutorial and write down why this is done.
 	void Update () {
 		if(myTarget != null) {
 			Vector3 targPos = myTarget.position;

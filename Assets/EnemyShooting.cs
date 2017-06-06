@@ -15,10 +15,11 @@ public class EnemyShooting : MonoBehaviour {
 
 
 	void Start() {
+        // Puts the bullets on the same layer as the enemy. Changed physics so theydont interact with each other. ie don't shoot themselves down
 		bulletLayer = gameObject.layer;
 	}
 
-	// Update is called once per frame
+	
 	void Update () {
 
 		if(player == null) {
@@ -35,7 +36,7 @@ public class EnemyShooting : MonoBehaviour {
 		
 		if( cooldownTimer <= 0 && player != null && Vector3.Distance(transform.position, player.position) < 4) {
 			// SHOOT!
-			//Debug.Log ("Enemy Pew!");
+			
 			cooldownTimer = fireDelay;
 			
 			Vector3 offset = transform.rotation * bulletOffset;
